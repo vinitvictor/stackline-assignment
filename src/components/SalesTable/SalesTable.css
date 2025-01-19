@@ -1,0 +1,45 @@
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sales-table th,
+.sales-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.sales-table th {
+    background-color: #f9f9f9; /* Light background for headers */
+    font-weight: bold;
+    color: #666; /* Subtle text color for headers */
+    text-transform: uppercase;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.sales-table td {
+    color: #333; /* Darker text color for table data */
+    border-bottom: 1px solid #eaeaea;
+}
+
+.sales-table tr:hover td {
+    background-color: #f5f5f5; /* Highlight row on hover */
+}
+
+/*.sales-table tr:nth-child(even) td {*/
+/*    background-color: #fafafa; !* Alternate row background color *!*/
+/*}*/
+
+.sales-table th svg {
+    margin-left: 5px; /* Space for sorting icons */
+    vertical-align: middle;
+    fill: #666;
+    height: 14px;
+    width: 14px;
+}

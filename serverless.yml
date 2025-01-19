@@ -1,0 +1,25 @@
+service: retail-sales-app
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+resources:
+  Resources:
+    RetailSalesAppBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: retail-sales-app-bucket
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: index.html
+
+plugins:
+  - serverless-s3-sync
+
+custom:
+  s3Sync:
+    - bucketName: retail-sales-app-bucket
+      localDir: build
+
