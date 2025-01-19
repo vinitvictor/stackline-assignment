@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+### Project URL - http://retail-sales-app-bucket.s3-website-us-east-1.amazonaws.com/
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Given:
+1.	A JSON file to be used as the data source to populate the web page
+2.	A wire mockup of what your final web page should look like.  You only need to implement the page with the graph and/or table.
+3.	SVG of the Stackline logo
 
-## Available Scripts
+## Project Requirement
+1.	A solution that resembles the provided mockup closely and implements AT LEAST ONE of either the graph or table as seen in the mockup
+2.	A working solution that takes the provided JSON file as output from a mock API call
+3.	A solution that implements React and Redux best practices and patterns
+4.	Clean, easy to follow code
 
-In the project directory, you can run:
 
-### `yarn start`
+## Features Completed
+1. Stackline Logo Added
+2. Added support for multiple product scalability
+3. Sorting in the table
+4. Based on selected sorting the chart also changes against Retail Sales.
+5. The application is hosted using serverless framework and deployed in static website s3 bucket.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Follow these instructions to get a development environment up and running.
 
-### `yarn test`
+Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+gh repo clone vinitvictor/stackline-assignment
+```
 
-### `yarn build`
+Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+# cd into root directory
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build the app in development mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
 
-### `yarn eject`
+Run the app in development mode
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deploment Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Follow these instructions to deploy the app using serverless
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Install Serverless Framework
 
-## Learn More
+```
+npm install -g serverless
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Add AWS access key and secrets
+
+```
+aws configure
+```
+
+Deploy application
+
+```
+serverless deploy
+```
+
